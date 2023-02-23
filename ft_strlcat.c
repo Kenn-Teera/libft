@@ -14,7 +14,6 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	size_t	i;
 	size_t	len_dst;
 	size_t	len_src;
 	size_t	total_len;
@@ -28,14 +27,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	dst[len_dst + (dstsize - len_dst -1)] = '\0';
 	return (total_len);
 }
-/*
-int main() {
-    char dst[20] = "Hello, ";
-    char *src = "world!";
-    size_t size = sizeof(dst);
-    size_t result = ft_strlcat(dst, src, size);
-    printf("dst: %s\n", dst);
-    printf("result: %zu\n", result);
-    return 0;
-}
-*/

@@ -5,13 +5,13 @@
 #                                                     +:+ +:+         +:+      #
 #    By: tyajai <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/02/23 15:30:44 by tyajai            #+#    #+#              #
-#    Updated: 2023/02/23 15:30:46 by tyajai           ###   ########.fr        #
+#    Created: 2023/02/23 16:00:00 by tyajai            #+#    #+#              #
+#    Updated: 2023/02/23 16:00:07 by tyajai           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 FLAGS = -Wall -Wextra -Werror
-NAME =    libft.a
+NAME =  libft.a
 SRC = 	ft_atoi.c\
 		ft_bzero.c\
 		ft_calloc.c\
@@ -41,16 +41,16 @@ OBJS = $(SRC:.c=.o)
 all: $(NAME)
 
 %o: %c
-    gcc $(FLAGS) -c $< -o $@
+	gcc $(FLAGS) -c $< -o $@
 
 $(NAME): $(OBJS)
-    ar -rcs $(NAME) $(OBJS)
+	ar -rcs $(NAME) $(OBJS)
 
 clean: 
-    rm -f $(OBJS)
+	rm -f $(OBJS)
 
 fclean: clean
-        rm -f $(NAME)
+	rm -f $(NAME)
 
 re: fclean all
 

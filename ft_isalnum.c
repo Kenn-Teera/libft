@@ -14,8 +14,8 @@
 
 int	ft_isalnum(int arg)
 {
-	if (arg >= '0' && arg <= '9' || arg >= 'A' && arg <= 'Z'
-		|| arg >= 'a' && arg <= 'z')
+	if ((arg >= '0' && arg <= '9') || (arg >= 'A' && arg <= 'Z')
+		|| (arg >= 'a' && arg <= 'z'))
 	{
 		return (1);
 	}
