@@ -14,6 +14,8 @@
 
 void	*ft_memset(void *str, int c, size_t n)
 {
+	if (n <= 0)
+		return (str);
 	while (n--)
 	{
 		*(char *)str = c;
@@ -21,6 +23,3 @@ void	*ft_memset(void *str, int c, size_t n)
 	}
 	return (str);
 }
-//note it come with void and int 
-//so u need to change it to char for change alphabet na
-//and size_t have unsigned so u need to change if u do with n
