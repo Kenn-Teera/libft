@@ -14,16 +14,22 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	size_t	len_dst;
-	size_t	len_src;
-	size_t	total_len;
-
-	len_dst = ft_strlen(dst);
-	len_src = ft_strlen(src);
-	total_len = len_dst + len_src;
-	if (dstsize <= len_dst)
-		return (len_src + dstsize);
-	ft_memcpy(dst + len_dst, src, dstsize - len_dst -1);
-	dst[len_dst + (dstsize - len_dst -1)] = '\0';
-	return (total_len);
+    size_t src_len;
+    size_t dst_len;
+	size_t total;
+	size_t bytes_to_copy;
+	
+	if (dst == NULL && dstsize == 0)
+		return (0);
+	src_len = ft_strlen(src);
+	dst_len = ft_strlen(dst);
+	if(dstsize < dst_len)
+		return (dstsize + src_len);
+	bytes_to_copy = dstsize - dst_len - 1;
+    ft_memcpy(dst + dst_len, src, bytes_to_copy);
+    dst[dst_len + bytes_to_copy] = '\0';
+	total = src_len + dst_len;
+    return (total);
+		
 }
+ 
