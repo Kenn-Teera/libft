@@ -14,5 +14,14 @@
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
+	size_t	start;
+	size_t	last;
 
+	if (!s1 || !set)
+		return (NULL);
+	strat = 0;
+	while (s1[start])
+	{
+		ft_strchr(s1[start], set);
+	}
 }
