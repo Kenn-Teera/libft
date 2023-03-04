@@ -14,14 +14,22 @@
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t	start;
-	size_t	last;
+	int	start;
+	int	last;
 
 	if (!s1 || !set)
 		return (NULL);
-	strat = 0;
-	while (s1[start])
+	start = 0;
+	last = ft_strlen(s1);
+	while (ft_strchr(set, s1[start]) != NULL)
 	{
-		ft_strchr(s1[start], set);
+		if (start == ft_strlen(s1))
+			return (ft_strdup(""));
+        start++;
 	}
+	while (ft_strchr(set,s1[last]) != NULL)
+	{
+		last--;
+	}
+	return (ft_substr(s1,start,(last - start + 1)));
 }
