@@ -11,8 +11,24 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stddef.h>
 
 char	**ft_split(char const *s, char c)
 {
-	
+	//count word
+	//malloc
+	//free
+	int	i;
+	int	count;
+
+	count = 0;
+	i = 0;
+	while(s[i])
+	{
+		if (s[i] == c)
+		{
+			count++;
+		}
+		i++;
+	}
 }
