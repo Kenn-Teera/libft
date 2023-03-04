@@ -14,8 +14,8 @@
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	int	start;
-	int	last;
+	size_t  start;
+	size_t	last;
 
 	if (!s1 || !set)
 		return (NULL);
