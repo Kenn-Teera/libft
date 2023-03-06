@@ -12,7 +12,9 @@
 
 FLAGS = -Wall -Wextra -Werror
 NAME =  libft.a
-SRC = 	ft_atoi.c\
+SRC = 	
+#Part1
+		ft_atoi.c\
 		ft_bzero.c\
 		ft_calloc.c\
 		ft_isalnum.c\
@@ -35,9 +37,19 @@ SRC = 	ft_atoi.c\
 		ft_strrchr.c\
 		ft_tolower.c\
 		ft_toupper.c\
+# Part2
 		ft_substr.c\
 		ft_strjoin.c\
 		ft_strtrim.c
+		#ft_split.c
+		#ft_itoa.c
+		#ft_strmapi.c
+		#ft_striteri.c
+		#ft_putchar_fd.c
+		#ft_putstr_fd.c
+		#ft_putendl_fd.c
+		#ft_putnub_fd.c
+#Bonus
 
 OBJS = $(SRC:.c=.o)
 

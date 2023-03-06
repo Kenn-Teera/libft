@@ -57,6 +57,22 @@ cp src >> dest
 
 - [x] atoi (ASCII to integer) is a function that is used to convert a string of characters representing an integer into an actual integer value.
 
+## Part 2 :
+
+- [x]
+
+- [x]
+
+- [x]
+
+- [ ]
+
+- [ ]
+
+...
+
+## BONUS :
+
 ## TESTER :
 
 Tripouille: https://github.com/Tripouille/libftTester
