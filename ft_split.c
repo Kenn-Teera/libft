@@ -13,22 +13,39 @@
 #include "libft.h"
 #include <stddef.h>
 
-char	**ft_split(char const *s, char c)
+static	int	count_word(char const *s, char c)
 {
-	//count word
-	//malloc
-	//free
-	int	i;
 	int	count;
+	int	i;
 
 	count = 0;
-	i = 0;
-	while(s[i])
+	i = 1;
+	while (s[i])
 	{
 		if (s[i] == c)
 		{
-			count++;
+			if (s[i+1] == c)
+			{
+				count++;
+			}
 		}
 		i++;
+		s++;
 	}
+	return count;
+	
+}
+
+char	**ft_split(char const *s, char c)
+{
+	int a = count_word(*s, c);
+	return ;
+}
+
+int main()
+{
+	char s = "sadfgasfd";
+	int a = count_word(s,a);
+	printf("a : \n",a);
+	return 0;
 }
